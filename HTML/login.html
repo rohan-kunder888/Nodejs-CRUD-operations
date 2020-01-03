@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link href= "css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="form-div">
+        <div class="loginDiv">
+            <h3>Existing User Login</h3>
+            <form action="/Validate" method="POST" class="login-form">
+                <label>UserName:</label>  
+                <input type="text" name="username" id="uname" autocomplete="off"><br><br>
+
+                <label for="">Password:</label> 
+                <input type="password" name="password" id="pass"><br>
+
+                <button type="submit" value="submit" class="login-button">Login</button>
+            </form>
+        </div>
+        <div class="registrationDiv">
+            <h3>New User Registration</h3>
+            <form action="/registerUser" method="POST" class="register-form">
+                <label>ID:</label>
+                <input type="number" name="registerFormId" id="register-form-id"><br><br>
+
+                <label>UserName:</label>  
+                <input type="text" name="registerFormUsername" id="register-form-uname" autocomplete="off"><br><br>
+
+                <label for="">Password:</label> 
+                <input type="password" name="registerFormPassword" id="register-form-pass"><br>
+
+                <button type="submit" value="submit" class="register-button"> Register User </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function registerUser(){
+            console.log("inside register function");
+            window.location = "/registerUser";
+        }
+    </script>
+</body>
+</html>

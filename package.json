@@ -1,0 +1,21 @@
+{
+  "name": "restaurant-assignment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "rohan",
+  "license": "ISC",
+  "dependencies": {
+    "alert-node": "^2.0.3",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "mongo": "^0.1.0",
+    "mongod": "^2.0.0",
+    "mongodb": "^3.4.0"
+  }
+}

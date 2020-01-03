@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Update Menu Page</title>
+    <link href= "/css/updateMenu.css" rel="stylesheet" type="text/css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="update-dish-div">
+        <form action="/update-dish-details" method="POST" id="update-data-form" class="update-data-form">
+            <h2>Update dish details in Menu</h2>
+            <label for="">ID :</label>
+            <input type="text" name="id" autocomplete="off" value="<%= data.id %>"><br><br>
+
+            <label for="">Dish :</label>
+            <input type="text" name="Dish" autocomplete="off" value="<%= data.name %>"><br><br>
+
+            <label for="">Image URl :</label>
+            <input type="text" name="imageUrl" autocomplete="off" value="<%= data.image %>"><br><br>
+
+            <label for="">Price :</label>
+            <input type="number" name="Price" autocomplete="off" value="<%= data.price %>"><br><br>
+
+            <button type="submit" class="update-dish-details-button">Update Dish Details</button>
+        </form>
+    </div>
+</body>
+</html>

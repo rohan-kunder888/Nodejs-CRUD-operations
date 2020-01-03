@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <h1>Your Cart</h1>
+
+    <table border="1" id="menutable">
+        <tr>
+            <thead>
+                <th>Id</th>
+                <th>Item</th>
+                <th>Price</th>
+            </thead>
+        </tr>  
+        <tbody id="cart-table-body"> 
+    
+        </tbody>  
+    </table>
+</body>
+<script>
+        $(document).ready(() => {
+                $.ajax({
+                    url: "/viewCart",
+                    method: "GET",
+                    data: {},
+                    success: data => {
+                        console.log(data);
+                        let rowData = "";
+                        data.forEach(item => {
+                            rowData += `<tr>
+                                    <td>${item.id}</td>
+                                    <td>${item.name}</td>
+                                    <td>${item.price}</td>
+                                </tr>`;
+                        });
+                        $("#cart-table-body").html(rowData);
+                    }
+                });
+            });
+</script>
+</html>

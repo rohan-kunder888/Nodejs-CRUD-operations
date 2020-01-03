@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(224, 224, 224);
+}
+.update-dish-div{
+    display: flex;
+    justify-content: center;
+}
+.update-data-form{
+    border: 2px solid;
+    padding: 10px 30px 10px 30px;
+    margin-top: 30px;
+}
+
+.update-dish-details-button{
+    font-size: 20px;
+    background-color: lightgoldenrodyellow;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.update-dish-details-button:hover{
+    background-color: rgba(234, 236, 67, 0.904) ;
+}

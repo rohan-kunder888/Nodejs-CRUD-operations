@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(224, 224, 224)
+}
+#menutable{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.add-menu-button, .view-cart-button, .logout-button{
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: lightgoldenrodyellow;
+}
+.add-menu-button:hover,.view-cart-button:hover,.logout-button:hover{
+    background-color: rgba(234, 236, 67, 0.904) ;
+}
+
+.update-button{
+    font-size: 16px;
+    padding: 5px;
+    color: white;
+    background-color: rgba(11, 94, 4,0.7);
+    border-radius: 20px;
+}
+.update-button:hover{
+    background-color: darkgreen;
+}
+
+.addToCart-button{
+    font-size: 16px;
+    padding: 5px;
+    color: white;
+    background-color: rgba(255, 174, 67,0.7);
+    border-radius: 20px;
+}
+.addToCart-button:hover{
+    background-color: orange;
+}
+
+.delete-button{
+    font-size: 16px;
+    color: whitesmoke;
+    padding: 5px;
+    background-color:rgba(255, 70, 70,0.85);
+    border-radius: 20px;
+}
+.delete-button:hover{
+    background-color: red;
+}

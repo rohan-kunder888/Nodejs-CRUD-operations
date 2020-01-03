@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Application</title>
+    <link href= "css/table.css" rel="stylesheet" type="text/css">
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <table border="1" id="menutable">
+        <tr>
+            <thead>
+                <th>Id</th>
+                <th>Item</th>
+                <th>Image</th>
+                <th>Price</th>
+                <th>Update</th>
+                <th>Delete</th>
+                <th>Add to Cart</th>
+            </thead>
+        </tr>  
+        <tbody id="emp-table-body"> 
+    
+        </tbody>  
+    </table>
+    <button type="submit" onclick="addMenu()" class="add-menu-button">Add New Dish in Menu</button>
+    <button type="submit" onclick="viewCart()" class="view-cart-button">View Cart</button>
+    <button type="submit" onclick="logout()" class="logout-button">Log Out</button>
+
+    <script>
+            $(document).ready(() => {
+                $.ajax({
+                    url: "/getAllMenuItems",
+                    method: "GET",
+                    data: {},
+                    success: data => {
+                        // console.log(data);
+                        let rowData = "";
+                        data.forEach(item => {
+                            rowData += `<tr>
+                                    <td>${item.id}</td>
+                                    <td>${item.name}</td>
+                                    <td><img style="height:100px;width:100px" src=${item.image}></td>
+                                    <td>${item.price}</td>
+                                    <td><input type="submit" value = "Update" class="update-button" onclick ="updateDish(${item.id})"></td> 
+                                    <td><input type="submit" value="Add To Cart" class="addToCart-button" onclick = addToCart(${item.id})></td>
+                                    <td><input type="submit" value="Delete" class="delete-button" onclick = deleteDish(${item.id})></td>
+                                </tr>`;
+                        });
+                        $("#emp-table-body").html(rowData);
+                    }
+                });
+            });
+
+            function addMenu(){
+                window.location="/addMenu"
+            }
+
+            function updateDish(id){
+                // console.log(id);
+                window.location ="/updateDish/"+id;
+            }
+
+            function addToCart(id){
+                // console.log(id);
+                window.location="/addToCart/"+id;
+            }
+
+            function viewCart(){
+                window.location="/cart";
+            }
+
+            function deleteDish(id){
+                // console.log(id);
+                window.location="/deleteDish/"+ id;
+            }
+
+            function logout(){
+                window.location="/logout"
+            }
+
+    </script>
+</body>
+</html>
