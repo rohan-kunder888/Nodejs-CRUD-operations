@@ -13,7 +13,7 @@
     "alert-node": "^2.0.3",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "mongo": "^0.1.0",
     "mongod": "^2.0.0",
     "mongodb": "^3.4.0"
